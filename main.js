@@ -1,6 +1,6 @@
 const { Client, Events, GatewayIntentBits, ComponentType, EmbedBuilder, InteractionCollector, Collection } = require("discord.js");
 
-const TOKEN = "MTEyNzM0MjExNzY1MjUzMzI0OA.G7DF_t.elIfj_eijiMJ51rLG0sIWyblQ_gMN6acT_Bzhc";
+const { TOKEN } = require("./token.js");
 const CLIENT_ID = "1127342117652533248";
 const CLIENT_AT_STRING = `<@${CLIENT_ID}>`;
 
