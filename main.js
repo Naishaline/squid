@@ -52,7 +52,7 @@ function error(message, errorMessage = "I'm just a silly squid, I don't know wha
 const colorPreviewEmbed = new EmbedBuilder()
     .setColor("#deadff")
     .setAuthor({name: "Do U Like Color?", iconURL: "http://voidspace.blog/doulikecolor.png"}) //Bold text with any image for icons
-    .setThumbnail("https://via.placeholder.com/50/deadff/deadff.png") //I have no idea what this website is, but it generates 50x50 pngs of any hex color given the right URL I think?
+    .setThumbnail("http://voidspace.blog/squid/${color}.gif") //Home spun preview
     .setFooter({ text: "Squid like color :)" })
 
 function resetEmbed()
@@ -118,7 +118,7 @@ client.on("messageCreate", async message => {
                 {
                     //Update color dependent info
                     colorPreviewEmbed.setColor(`#${color}`);
-                    colorPreviewEmbed.setThumbnail(`https://via.placeholder.com/50/${color}/${color}.png`);
+                    colorPreviewEmbed.setThumbnail(`http://voidspace.blog/squid/${color}.gif`);
 
                     response = await message.reply({
                         embeds: [ colorPreviewEmbed ],
